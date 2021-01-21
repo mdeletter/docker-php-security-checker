@@ -18,9 +18,9 @@ mkdir -p /shared/tmp
 docker run -v /shared/tmp:/tmp -v $PWD:/app martijn/php-security-checker --update-db
 
 # project 1
-docker run -v /shared/tmp:/tmp -v $PWD:/app martijn/php-security-checker --local
+docker run -v /shared/tmp:/tmp -v $PWD:/app martijn/php-security-checker --local --path=/app
 # project 2
-docker run -v /shared/tmp:/tmp -v $PWD:/app martijn/php-security-checker --local
+docker run -v /shared/tmp:/tmp -v $PWD:/app martijn/php-security-checker --local --path=/app
 # ... etc
 ```
 
