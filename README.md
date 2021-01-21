@@ -5,7 +5,7 @@ Wraps the Local PHP Security Checker inside a small Docker container.
 ## Check inside your development
 ```bash
 cd /yourproject
-docker run --rm -v $PWD:/app martijn/php-security-checker --path=/app
+docker run --rm -v $PWD:/app martijn/php-security-checker
 ```
 
 ## Cache the vulnerability database between checks
@@ -18,9 +18,9 @@ mkdir -p /shared/tmp
 docker run -v /shared/tmp:/tmp -v $PWD:/app martijn/php-security-checker --update-db
 
 # project 1
-docker run -v /shared/tmp:/tmp -v $PWD:/app martijn/php-security-checker --local --path=/app
+docker run -v /shared/tmp:/tmp -v $PWD:/app martijn/php-security-checker --local
 # project 2
-docker run -v /shared/tmp:/tmp -v $PWD:/app martijn/php-security-checker --local --path=/app
+docker run -v /shared/tmp:/tmp -v $PWD:/app martijn/php-security-checker --local
 # ... etc
 ```
 
